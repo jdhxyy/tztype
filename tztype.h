@@ -61,4 +61,10 @@ typedef void (*TZEmptyFunc)(void);
 // TZDataFunc 数据函数类型
 typedef void (*TZDataFunc)(uint8_t* bytes, int size);
 
+// TZWriteIO 设置引脚电平
+typedef void (*TZWriteIO)(bool level);
+
+// TZReadIO 读取引脚电平
+typedef bool (*TZReadIO)(void);
+
 #endif
