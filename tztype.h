@@ -11,6 +11,13 @@
 // 未使用命令声明.可避免编译器警告
 #define TZ_UNUSED(v) (void)v
 
+// 中断优先级
+#define TZ_IRQ_PRIORITY_HIGHEST 0
+#define TZ_IRQ_PRIORITY_HIGH 1
+#define TZ_IRQ_PRIORITY_MIDDLE 2
+#define TZ_IRQ_PRIORITY_LOW 3
+#define TZ_IRQ_PRIORITY_LOWEST 4
+
 #pragma pack(1)
 
 // 缓冲区数据结构
