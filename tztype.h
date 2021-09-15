@@ -68,6 +68,9 @@ typedef void (*TZEmptyFunc)(void);
 // TZDataFunc 数据函数类型
 typedef void (*TZDataFunc)(uint8_t* bytes, int size);
 
+// TZNetDataFunc 网络数据函数类型
+typedef void (*TZNetDataFunc)(uint8_t* bytes, int size, uint32_t ip, uint16_t port);
+
 // TZWriteIO 设置引脚电平
 typedef void (*TZWriteIO)(bool level);
 
