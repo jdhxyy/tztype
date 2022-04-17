@@ -59,6 +59,14 @@ typedef struct {
 
 #pragma pack()
 
+// 处理帧的返回值
+typedef enum {
+    // 放行
+    TZ_PASS,
+    // 拦截
+    TZ_STOP
+} TZDealFrameReturn;
+
 // TZIsAllowSendFunc 是否允许发送函数类型
 typedef bool (*TZIsAllowSendFunc)(void);
 
