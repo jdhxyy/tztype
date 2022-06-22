@@ -7,6 +7,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 // 未使用命令声明.可避免编译器警告
 #define TZ_UNUSED(v) (void)v
