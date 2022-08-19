@@ -28,7 +28,7 @@
 typedef struct {
     int len;
     uint8_t buf[TZ_BUFFER_TINY_LEN];
-} TZBuffeTiny;
+} TZBufferTiny;
 
 #define TZ_BUFFER_SMALL_LEN 64
 typedef struct {
