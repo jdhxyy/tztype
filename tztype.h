@@ -82,6 +82,9 @@ typedef void (*TZDataFunc)(uint8_t* bytes, int size);
 // TZNetDataFunc 网络数据函数类型
 typedef void (*TZNetDataFunc)(uint8_t* bytes, int size, uint32_t ip, uint16_t port);
 
+// TZPipeDataFunc 管道数据函数类型
+typedef void (*TZPipeDataFunc)(uint8_t* bytes, int size, uint32_t ip, uint16_t port, int pipe);
+
 // TZDataByIAFunc 根据ia地址发送数据函数类型
 typedef void (*TZDataByIAFunc)(uint8_t* bytes, int size, uint32_t ia);
 
