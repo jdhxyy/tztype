@@ -1,5 +1,5 @@
 // Copyright 2021-2021 The jdh99 Authors. All rights reserved.
-// ³£ÓÃ»ù´¡Êı¾İÀàĞÍ
+// å¸¸ç”¨åŸºç¡€æ•°æ®ç±»å‹
 // Authors: jdh99 <jdh821@163.com>
 
 #ifndef TZTYPE_H
@@ -11,10 +11,10 @@
 #include <string.h>
 #include <stdio.h>
 
-// Î´Ê¹ÓÃÃüÁîÉùÃ÷.¿É±ÜÃâ±àÒëÆ÷¾¯¸æ
+// æœªä½¿ç”¨å‘½ä»¤å£°æ˜.å¯é¿å…ç¼–è¯‘å™¨è­¦å‘Š
 #define TZ_UNUSED(v) (void)v
 
-// ÖĞ¶ÏÓÅÏÈ¼¶
+// ä¸­æ–­ä¼˜å…ˆçº§
 #define TZ_IRQ_PRIORITY_HIGHEST 0
 #define TZ_IRQ_PRIORITY_HIGH 1
 #define TZ_IRQ_PRIORITY_MIDDLE 2
@@ -23,7 +23,7 @@
 
 #pragma pack(1)
 
-// »º³åÇøÊı¾İ½á¹¹
+// ç¼“å†²åŒºæ•°æ®ç»“æ„
 #define TZ_BUFFER_TINY_LEN 32
 typedef struct {
     int len;
@@ -54,7 +54,7 @@ typedef struct {
     uint8_t buf[TZ_BUFFER_LARGE_LEN];
 } TZBufferLarge;
 
-// TZBufferDynamic ¶¯Ì¬»º´æ
+// TZBufferDynamic åŠ¨æ€ç¼“å­˜
 typedef struct {
     int len;
     uint8_t buf[];
@@ -62,36 +62,36 @@ typedef struct {
 
 #pragma pack()
 
-// ´¦ÀíÖ¡µÄ·µ»ØÖµ
+// å¤„ç†å¸§çš„è¿”å›å€¼
 typedef enum {
-    // ·ÅĞĞ
+    // æ”¾è¡Œ
     TZ_PASS,
-    // À¹½Ø
+    // æ‹¦æˆª
     TZ_STOP
 } TZDealFrameReturn;
 
-// TZIsAllowSendFunc ÊÇ·ñÔÊĞí·¢ËÍº¯ÊıÀàĞÍ
+// TZIsAllowSendFunc æ˜¯å¦å…è®¸å‘é€å‡½æ•°ç±»å‹
 typedef bool (*TZIsAllowSendFunc)(void);
 
-// TZEmptyFunc ¿Õº¯ÊıÀàĞÍ
+// TZEmptyFunc ç©ºå‡½æ•°ç±»å‹
 typedef void (*TZEmptyFunc)(void);
 
-// TZDataFunc Êı¾İº¯ÊıÀàĞÍ
+// TZDataFunc æ•°æ®å‡½æ•°ç±»å‹
 typedef void (*TZDataFunc)(uint8_t* bytes, int size);
 
-// TZNetDataFunc ÍøÂçÊı¾İº¯ÊıÀàĞÍ
+// TZNetDataFunc ç½‘ç»œæ•°æ®å‡½æ•°ç±»å‹
 typedef void (*TZNetDataFunc)(uint8_t* bytes, int size, uint32_t ip, uint16_t port);
 
-// TZPipeDataFunc ¹ÜµÀÊı¾İº¯ÊıÀàĞÍ
+// TZPipeDataFunc ç®¡é“æ•°æ®å‡½æ•°ç±»å‹
 typedef void (*TZPipeDataFunc)(uint8_t* bytes, int size, uint32_t ip, uint16_t port, int pipe);
 
-// TZDataByIAFunc ¸ù¾İiaµØÖ··¢ËÍÊı¾İº¯ÊıÀàĞÍ
+// TZDataByIAFunc æ ¹æ®iaåœ°å€å‘é€æ•°æ®å‡½æ•°ç±»å‹
 typedef void (*TZDataByIAFunc)(uint8_t* bytes, int size, uint32_t ia);
 
-// TZWriteIO ÉèÖÃÒı½ÅµçÆ½
+// TZWriteIO è®¾ç½®å¼•è„šç”µå¹³
 typedef void (*TZWriteIO)(bool level);
 
-// TZReadIO ¶ÁÈ¡Òı½ÅµçÆ½
+// TZReadIO è¯»å–å¼•è„šç”µå¹³
 typedef bool (*TZReadIO)(void);
 
 #endif
